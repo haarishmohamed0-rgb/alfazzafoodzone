@@ -1,0 +1,355 @@
+/* === Global Theme === */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #0a0a0a; /* deep black */
+  color: #fffacd;       /* light yellow */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* === Header === */
+/* === Header Updated === */
+/* === Header Styling with Logos === */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #111; /* adjust as needed */
+  color: white;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.order-info {
+  font-size: 16px;
+  color:  #1a1a1a;
+  background-color: #ffce00; /* WhatsApp green */
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+
+/* Logo Section */
+.logo-section {
+  position: absolute;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.shop-logo, .halal-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffce00;
+  box-shadow: 0 0 10px rgba(255, 206, 0, 0.4);
+}
+
+/* Title block */
+.title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3.5em;
+  color: #ffce00;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: bounceIn 1.2s ease-out;
+}
+
+header p {
+  margin-to-Top: 10px;
+  font-size: 1.3em;
+  color: #fffacd;
+  font-weight: 500;
+  animation: fadeIn 2s ease;
+}
+
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* Logo on the right */
+.logo {
+  width: 100px;
+  height: auto;
+  animation: pulse 3s infinite;
+  
+}
+@keyframes bounceIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* === Offers Section === */
+.offers {
+  background-color: #ffce00;
+  color: #000;
+  padding: 15px;
+  font-weight: bold;
+  text-align: center;
+  animation: slideInLeft 1.2s ease-out;
+}
+
+/* === Menu Section === */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+/* Each menu item card */
+.menu .item {
+  background: #1a1a1a;
+  border: 2px solid #ffce00;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 206, 0, 0.2);
+  transform: scale(0.95);
+  opacity: 0;
+  animation: zoomIn 0.8s ease forwards;
+  animation-delay: var(--delay);
+  transition: transform 0.3s;
+}
+
+.menu .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 206, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+  border-color: #fffacd;
+}
+.item-details h3:hover {
+  color: #ffffff;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+.price:hover {
+  color: #ffce00;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.menu img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.menu .item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu .item:hover img {
+  transform: scale(1.05);
+}
+
+.item-details {
+  padding: 15px;
+}
+
+.item-details h3 {
+  margin-top: 0;
+  color: #ffce00;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #fffacd;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  border-top: 2px solid #ffce00;
+  color: #fffacd;
+}
+
+/* === Scroll-to-Top & Theme Toggle Buttons === */
+#backToTop, #themeToggle {
+  position: fixed;
+  bottom: 20px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffce00;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(255, 206, 0, 0.6);
+  transition: transform 0.3s;
+}
+
+#backToTop {
+  right: 20px;
+}
+
+#themeToggle {
+  right: 80px;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #0a0a0a;
+  color: #ffce00;
+}
+
+.map-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.map-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffce00;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin: 0 auto;
+  border: 4px solid #ffce00;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 206, 0, 0.4);
+}.footer-bottom {
+  text-align: center;
+  background-color: #000;
+  padding: 20px;
+  font-size: 1em;
+  border-top: 1px solid #ffce00;
+  color: #fffacd;
+}
+
+.footer-bottom a {
+  color: #ffce00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff;
+}
+
+
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.insta-link {
+  display: inline-flex;
+  align-items: center;
+  color: #ffce00;
+  text-decoration: none;
+  font-weight: bold;
+  gap: 5px;
+}
+
+.insta-link:hover {
+  color: #ffffff;
+}
+
+.insta-icon {
+  vertical-align: middle;
+}
